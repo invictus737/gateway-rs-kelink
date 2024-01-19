@@ -39,4 +39,5 @@ tail -f /user/helium_gateway/log/helium_gateway.log
 releases folder have some precompiled generic binaries. No Kerlink TZ as there is no open source for those. Use kerlink_musleabihf as the best optimised code for the Kerlink slow cpu.
 
 All the best!73!
+
 Chris/YO3TCO
