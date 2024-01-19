@@ -13,7 +13,10 @@ rustflags = [
 $
 
 cargo install cross --git https://github.com/cross-rs/cross
+
 cross build --target armv7-unknown-linux-musleabihf --release
+or
+cross build --target armv7-unknown-linux-gnueabihf --release
 
 **Kerlink info from console:**
 _cat /proc/cpuinfo 
