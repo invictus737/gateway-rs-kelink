@@ -7,7 +7,7 @@ $ cat .cargo/config.toml
 [target.armv7-unknown-linux-musleabihf]
 rustflags = [
   "-C", "target-cpu=cortex-a9",
-  "-C", "target-feature=+neon,+trustzone,+sha2,+thumb-mode,+vfp3,+crt-static",
+  "-C", "target-feature=+aclass,+neon,+sha2,+v7,+vfp3,+crt-static",
   "-C", "link-args=-static",
 ]
 $
@@ -35,3 +35,8 @@ Revision	: 0000
 Serial		: 0000000000000000_
 
 tail -f /user/helium_gateway/log/helium_gateway.log
+
+releases folder have some precompiled generic binaries. No Kerlink TZ as there is no open source for those. Use kerlink_musleabihf as the best optimised code for the Kerlink slow cpu.
+
+All the best!73!
+Chris/YO3TCO
