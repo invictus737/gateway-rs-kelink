@@ -1,5 +1,6 @@
-[target.mipsel-unknown-linux-musl]
+[target.armv7-unknown-linux-musleabihf]
 rustflags = [
-    "-C", "target-feature=+crt-static",
-    "-C", "link-args=-static",
+  "-C", "target-cpu=cortex-a9",
+  "-C", "target-feature=+neon,+trustzone,+sha2,+thumb-mode,+vfp3,+crt-static",
+  "-C", "link-args=-static",
 ]
