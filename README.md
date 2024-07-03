@@ -7,9 +7,12 @@ Compiled on OracleCloudInfractucture VM.Standard3.Flex (Intel) instance (4cores,
 $ cat .cargo/config.toml 
 [target.armv7-unknown-linux-musleabihf]
 rustflags = [
-  "-C", "target-cpu=cortex-a9",
-  "-C", "target-feature=+aclass,+neon,+sha2,+v7,+vfp3,+crt-static",
-  "-C", "link-args=-static",
+    "-C", "target-cpu=cortex-a9",
+    "-C", "target-feature=+neon,+vfp3,+d32,+dsp",
+    "-C", "opt-level=3",
+    "-C", "inline-threshold=100",
+    "-C", "lto=fat",
+    "-C", "codegen-units=1"
 ]
 $
 ```
